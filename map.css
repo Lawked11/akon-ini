@@ -1,0 +1,110 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 10px;
+    box-sizing: border-box;
+    position: relative; /* Set relative position for bell icon */
+}
+
+/* Form Container Styles */
+.form-container {
+    background: linear-gradient(135deg, #ACB6E5 40%, #74ebd5 52%);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Input Field Styles */
+input {
+    padding: 10px;
+    width: calc(100% - 24px); /* 100% width minus padding and borders */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+    margin-bottom: 10px;
+}
+
+input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* Button Styles */
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 150px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Map Styles */
+#map {
+    height: 600px; /* Increased map height */
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+#map:hover {
+    transform: scale(1.02);
+}
+
+/* Notification Bell Icon Styles */
+.notification-bell {
+    position: fixed; /* Keep it fixed in the viewport */
+    top: 10px; /* Position closer to the top of the viewport */
+    right: 10px; /* Position closer to the right edge */
+    font-size: 24px; /* Size of the icon */
+    cursor: pointer;
+    color: #333; /* Icon color */
+    z-index: 1000; /* Ensure it is on top */
+}
+
+/* Notification Popup Styles */
+.notification-popup {
+    position: fixed; /* Keep it fixed to follow the bell icon */
+    top: 50px; /* Set the popup below the bell icon */
+    right: 10px; /* Align with the bell icon on the right */
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: none; /* Initially hidden */
+    z-index: 1000; /* Ensure it is on top */
+    max-height: 300px; /* Set max height for the popup */
+    overflow-y: auto; /* Allow scrolling if content exceeds max height */
+}
+
+.notification-popup div {
+    margin-bottom: 5px; /* Spacing between notification entries */
+    font-size: 14px; /* Font size for notifications */
+}
+
+/* Additional Styles for Notifications */
+.notification-popup h4 {
+    margin: 0;
+    font-size: 16px;
+    color: #007BFF; /* Color for notification heading */
+}
